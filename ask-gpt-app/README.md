@@ -1,54 +1,52 @@
-# React + TypeScript + Vite
+# 🧠 Ask GPT – AI Assistant Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based AI assistant powered by OpenAI's GPT-3.5-turbo.  
+Type in any question and get intelligent, conversational answers in real time.
 
-Currently, two official plugins are available:
+![preview](image.png)
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- ⚡ Built with React + Material UI
+- 🤖 Powered by OpenAI GPT-3.5 API
+- 💬 Chat-style prompt + AI response
+- 🔐 API key via `.env` (secured)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React (Vite), Material UI (MUI)
+- **AI Model:** OpenAI GPT-3.5 via REST API
+- **Styling:** MUI theme + custom layout
+- **Hosting:** Vercel (or Netlify recommended)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone this repo
+
+```bash
+git clone https://github.com/shubhamstrength/basicgpt
+cd basicgpt
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+### 3. Set up your OpenAI API Key
+Create a .env file in the root:
+
+```bash
+VITE_OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+###4. Run locally
+```bash
+ npm run dev
+ ```
