@@ -3,7 +3,8 @@
 A modern React-based AI assistant powered by OpenAI's GPT-3.5-turbo.  
 Type in any question and get intelligent, conversational answers in real time.
 
-![preview](image.png)
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/c84a54cf-bca1-4529-99c9-c1cbf07bf0c8" />
+
 ---
 
 ## ✨ Features
