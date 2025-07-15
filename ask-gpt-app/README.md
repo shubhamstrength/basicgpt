@@ -1,6 +1,7 @@
 # 🧠 Ask GPT – AI Assistant Web App
 
-A modern React-based AI assistant powered by OpenAI's GPT-3.5-turbo.  
+A modern React-based AI assistant powered by OpenAI's GPT-3.5-turbo.
+This adds use of RAG to pull info from some texts files as well.
 Type in any question and get intelligent, conversational answers in real time.
 
 ![preview](image.png)

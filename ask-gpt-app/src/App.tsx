@@ -17,27 +17,14 @@ function App() {
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const askGPT = async () => {
+  const askRAG = async () => {
     setLoading(true);
     setResponse('');
     try {
-      const res = await axios.post(
-        'https://api.openai.com/v1/chat/completions',
-        {
-          model: 'gpt-3.5-turbo',
-          messages: [
-            { role: 'system', content: 'You are a helpful assistant.' },
-            { role: 'user', content: input }
-          ]
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
-            'Content-Type': 'application/json'
-          }
-        }
-      );
-      setResponse(res.data.choices[0].message.content);
+      const res = await axios.post('http://127.0.0.1:8000/ask', {
+        question: input
+      });
+      setResponse(res.data.answer);
     } catch (err) {
       console.error(err);
       setResponse('Something went wrong. Check console for details.');
@@ -51,7 +38,7 @@ function App() {
       <Container maxWidth="md" sx={{ mt: 8 }}>
         <Paper elevation={3} sx={{ p: 4 }}>
           <Typography variant="h4" gutterBottom>
-            Ask GPT Anything
+            Ask Shubham's Knowledge Assistant
           </Typography>
           <TextField
             fullWidth
@@ -67,10 +54,10 @@ function App() {
             <Button
               variant="contained"
               color="primary"
-              onClick={askGPT}
+              onClick={askRAG}
               disabled={loading || !input.trim()}
             >
-              {loading ? <CircularProgress size={24} /> : 'Ask GPT'}
+              {loading ? <CircularProgress size={24} /> : 'Ask'}
             </Button>
           </Box>
           {response && (

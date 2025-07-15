@@ -5,7 +5,7 @@ const Header = () => {
     <AppBar position="static" color="primary" elevation={3}>
       <Toolbar>
         <Typography variant="h6" component="div">
-          Ask GPT – Your AI Assistant
+          RAG AI Assistant
         </Typography>
       </Toolbar>
     </AppBar>
