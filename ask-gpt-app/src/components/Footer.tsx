@@ -1,22 +1,9 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Text } from '@chakra-ui/react'
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <Box
-      sx={{
-        textAlign: 'center',
-        mt: 6,
-        py: 2,
-        borderTop: '1px solid #ddd',
-        fontSize: '0.9rem',
-        color: 'gray',
-      }}
-    >
-      <Typography variant="body2">
-        Made with ❤️ by Shubham
-      </Typography>
+    <Box as="footer" py={6} textAlign="center" color="gray.500" _dark={{ color: 'gray.400' }}>
+      <Text>Made with ❤️ by Shubham</Text>
     </Box>
-  );
-};
-
-export default Footer;
+  )
+}
